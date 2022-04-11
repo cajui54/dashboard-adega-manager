@@ -1,0 +1,263 @@
+body{
+    background-color: rgb(243, 250, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* section header*/
+#header{
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    box-shadow: 0 0 5px rgb(85, 85, 85);
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+#header div{
+    background-color: rgb(62, 62, 133);
+    width: 60px;
+    height: 55px;
+    text-align: center;
+    color: #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+    padding-top: 10px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+/*main*/
+
+#main{
+    width: 100%;
+}
+
+/*section info */
+.main__section-text{
+    width: 100%;
+    height: 150px;
+    margin: 50px 0;
+}
+
+/*cards info*/
+.main__section-text h1, p{
+    margin-left: 50px;
+}
+.main__section-text h1{
+    margin-top: 100px;
+    font-size: 35px;
+}
+.main__section-text p{
+    margin-top: -5px;
+    color: rgb(114, 114, 114);
+}
+.main__section-info{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 100px auto;
+}
+.card-info:hover{
+    transform: scale(1.2);
+}
+.main__section-info .card-info{
+    background-color: #fff;
+    height: 80%;
+    width: 28%;
+    box-shadow: 0 0 10px rgb(141, 141, 141);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.main__section-info .text-info{
+    font-size: 20px;
+    font-weight: bold;
+}
+.main__section-info .subtext-info{
+    color: rgb(90, 93, 95);
+    margin-top: -15px;
+    font-size: 15px;
+}
+.main__section-info .output-info{
+    font-size: 40px;
+    color: rgb(82, 52, 52);
+}
+
+.main__section-info .info-text{
+    width: 60%;
+    height: 80%;
+    box-sizing: border-box;
+}
+.main__section-info i{
+    font-size: 100px;
+    color: rgb(82, 52, 52);
+    margin-right: 20px;
+}
+#output-stock-now{
+    color: rgb(9, 199, 9);
+}
+#output-stock-total{
+    color: rgb(250, 125, 125);
+}
+
+/*Section Seach*/
+.main___sectio-seach{
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+}
+.field-input-seach, .field-seach-output{
+    background-color: #fff;
+    width: 90%;
+    min-height: 100px;
+    margin: 70px auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    border: 1px dotted slategray;
+}
+.field-input-seach button{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 2px 2px 1px;
+    border: 1px solid silver;
+    transition: all .5s ease-in-out;
+}
+.field-input-seach button:hover{
+    transform: scale(1.2);
+}
+
+#btn-Seach{
+    background-color: rgb(77, 75, 75);
+    color: #fff;
+    margin-left: 10px;
+    
+}
+.field-input-seach #input-seach {
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid slategray;
+}
+.lbl-msg{
+    margin: 9px 0 0 50px;
+    font-size: 12px;
+    display: block;
+    color: rgb(129, 125, 125);
+}
+/*Seach output*/
+.field-seach-output{
+    height: 30px;
+    box-sizing: border-box;
+}
+.field-seach-output #list-seach{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 80%;
+    margin: -10px 0 0 50px;
+    font-size: 20px;
+    color: slategray;
+}
+/*Seach Table*/
+.main___section-table{
+    width: 100%;
+    margin: 100px auto;
+    display: flex ;
+    justify-content: space-between;
+}
+.main___section-table table{
+    margin-left: 50px;
+    width: 70%;
+    border-collapse: collapse;
+    text-align: center;
+    height: 500px;
+    overflow: scroll;
+    background-color: #fff;
+}
+.main___section-table table caption{
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+    font-weight: bold;
+    padding: 25px 0;
+    margin: 20px 0;
+}
+
+.main___section-table thead th{
+    background-color: rgb(87, 83, 90);
+    padding: 20px;
+    color: #fff;
+}
+.main___section-table tbody td{
+    height: 30px;
+}
+.main___section-table table tbody tr:nth-child(even){
+    background-color: rgb(236, 236, 236);
+}
+
+/*Form*/
+#frm-add-product{
+    background-color: #fff;
+    width: 20%;
+    margin: 10px 50px 0 0;
+    border-top: 5px solid rgb(87, 83, 90);
+    border-bottom: 5px solid rgb(87, 83, 90);
+    border-radius: 30px;
+    min-height: 770px;
+}
+.subtitulo-frm{
+    text-align: center;
+    margin-top: 100px;
+}
+#frm-add-product fieldset{
+    width: 80%;
+    margin: 60px auto;
+}
+.area-input, .area-btns{
+    height: 70px;
+    margin-top: 50px;
+}
+#frm-add-product .lbl-form, .lbl-mgs-error-form{
+    margin: 10px 2px;
+    display: block;
+    color: rgb(66, 66, 66);
+}
+#frm-add-product input, #select-type{
+    padding: 5px;
+    font-size: 20px;
+    border: .8px solid rgb(222, 222, 223);
+    border-radius: 5px;
+}
+#frm-add-product .area-input:nth-child(5){
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#frm-add-product .lbl-mgs-error-form{
+    font-size: 12px;
+}
+
+.area-btns{
+    margin-top: 70px;
+}
+.area-btns button{
+    margin-left: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+.msg-form{
+  margin: 10px auto;
+  color: rgb(87, 83, 90);;
+}
+.main___section-table button{
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+}

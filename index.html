@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4e4e2da3ad.js" crossorigin="anonymous"></script>
+    <title>Adega Manager</title>
+    <link rel="shortcut icon" href="./img/champagne-glasses-solid.svg">
+    
+    <!--link css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/validacao.css">
+</head>
+<body>
+    <header id="header">
+        <div>
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section class="main__section-text">
+            <h1>Analytics Dashboard</h1>
+            <p>Monitor Keys metrics. Check reporting and review insights</p>
+        </section>
+
+        <section class="main__section-info">
+
+            <div class="card-info">
+
+                <div class="info-text">
+
+                    <p class="text-info">VALOR TOTAL</p>
+                    <p class="subtext-info">Estimado em Estaque</p>
+                    <p class='output-info' id="output-values-total"> R$: 0,00</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+            
+            <div class="card-info">
+
+                <div class="info-text">
+                    <p class="text-info">ESTOQUE TOTAL</p>
+                    <p class="subtext-info">Total de itens em Estoque</p>
+                    <p class='output-info' id="output-values-total-amont">0</p>
+                </div>
+                
+                <i class="fa-solid fa-boxes-stacked"></i>
+
+            </div>
+
+            <div class="card-info">
+
+                <div class="info-text">
+                    <p class="text-info">CAPACIDADE</p>
+                    <p class="subtext-info">Capacidade do estoque</p>
+                    <p class='output-info'>
+                        <span id="output-stock-now">0 </span>/
+                        <span id="output-stock-total">0</span>
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+        </section>
+
+        <section class="main___sectio-seach">
+
+            <fieldset class="field-input-seach">
+
+                <legend>Pesquisar Produto</legend>
+                <label for="input-seach" class="lblSeach">Código:</label>
+                <input type="text" id="input-seach" name="seach" placeholder="digite o código do produto" max="4" maxlength="4">
+                <button id="btn-Seach"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="btn-clear-seach"><i class="fa-solid fa-broom"></i></button>
+                <label for="input-seach" class="lbl-msg"></label>
+
+            </fieldset>
+
+            <fieldset class="field-seach-output">
+                <legend>Resultado da Pesquisa</legend>
+
+                <ul id="list-seach">
+                </ul>
+
+            </fieldset>
+        </section>
+
+        <section class="main___section-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Fornecedor</th>
+                        <th>Categoria</th>
+                        <th>Unitário</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody"></tbody>
+            </table>
+
+            <form id="frm-add-product">
+                <h2 class="subtitulo-frm">Cadastrar Produto</h2>
+
+                <fieldset>
+                    <legend>Produto</legend>
+
+                    <div class="area-input">
+                        <label for="input-id" class="lbl-form displayBlock">Código</label>
+                        <input type="text" id="input-id" name="id" maxlength="4" placeholder="Digite o código">
+                        <label for="input-id" class="lbl">*</label>
+                        <label for="area-id" class="lbl-mgs-error-form"></label>
+                    </div>
+
+                    <div class="area-input">
+                        <label for="input-description" class="lbl-form">Descrição</label>
+                        <input type="text" id="input-description" name="description">
+                        <label for="input-description" class="lbl">*</label>
+                        <label for="area-description" class="lbl-mgs-error-form"></label>
+                    </div>
+
+                    <div class="area-input">
+                        <label for="input-brand" class="lbl-form">Fornecedor</label>
+                        <input type="text" id="input-brand" name="brand" >
+                        <label for="input-brand" class="lbl">*</label>
+                        <label for="area-input" class="lbl-mgs-error-form"></label>
+                    </div>
+
+                    <div class="area-input">
+                        <label for="input-type" class="lbl-form">Categoria</label>
+                        <select name="type" id="select-type" required>
+                            <option disabled="disabled" selected>selecione</option>
+                        </select>
+                        <label for="area-input" class="lbl-mgs-error-form"></label>
+                    </div>
+
+                    <div class="area-input">
+                        <label for="input-amount" class="lbl-form">Quantidade</label>
+                        <input type="number" id="input-amount" name="amount" placeholder="0" min="1">
+                        <label for="input-amount" class="lbl">*</label>
+                        <label for="area-input" class="lbl-mgs-error-form"></label>
+                    </div>
+
+                    <div class="area-input">
+                        <label for="input-price" class="lbl-form">Preço</label>
+                        <input type="number" id="input-price" name="price" placeholder="0,00" min ='0'>
+                        <label for="input-price" class="lbl">*</label>
+                        <label for="area-input" class="lbl-mgs-error-form"></label>
+                    </div>
+                    
+                    <div class="area-btns">
+                        <button id="btn-salve" class="btn btn-primary">Confirmar</button>
+                        <button id="btn-cancel" class="btn-secondary">Cancelar</button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    
+    <script  src="./js/validation.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
